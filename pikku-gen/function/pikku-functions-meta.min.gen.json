@@ -1,0 +1,42 @@
+{
+  "greetUser": {
+    "pikkuFuncName": "greetUser",
+    "inputSchemaName": "GreetUserInput",
+    "outputSchemaName": "GreetUserOutput"
+  },
+  "addNumbers": {
+    "pikkuFuncName": "addNumbers",
+    "inputSchemaName": "AddNumbersInput",
+    "outputSchemaName": "AddNumbersOutput"
+  },
+  "subtractNumbers": {
+    "pikkuFuncName": "subtractNumbers",
+    "inputSchemaName": "SubtractNumbersInput",
+    "outputSchemaName": "SubtractNumbersOutput"
+  },
+  "multiplyNumbers": {
+    "pikkuFuncName": "multiplyNumbers",
+    "inputSchemaName": "MultiplyNumbersInput",
+    "outputSchemaName": "MultiplyNumbersOutput"
+  },
+  "divideNumbers": {
+    "pikkuFuncName": "divideNumbers",
+    "inputSchemaName": "DivideNumbersInput",
+    "outputSchemaName": "DivideNumbersOutput"
+  },
+  "createUser": {
+    "pikkuFuncName": "createUser",
+    "inputSchemaName": "CreateUserInput",
+    "outputSchemaName": "CreateUserOutput"
+  },
+  "listUsers": {
+    "pikkuFuncName": "listUsers",
+    "inputSchemaName": "ListUsersInput",
+    "outputSchemaName": "ListUsersOutput"
+  },
+  "processFile": {
+    "pikkuFuncName": "processFile",
+    "inputSchemaName": "ProcessFileInput",
+    "outputSchemaName": "ProcessFileOutput"
+  }
+}
