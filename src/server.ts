@@ -1,0 +1,33 @@
+import { PikkuUWSServer } from '@pikku/uws'
+
+import '#pikku/pikku-bootstrap.gen.js'
+
+import { createSingletonServices } from './/services.js'
+import { createConfig } from './/config.js'
+
+async function main(): Promise<void> {
+  try {
+    const config = await createConfig()
+    const singletonServices = await createSingletonServices(config)
+    const appServer = new PikkuUWSServer(
+      { ...config, hostname: 'localhost', port: 4002 },
+      singletonServices.logger
+    )
+    await appServer.enableExitOnSigInt()
+    await appServer.init()
+
+    console.log('🚀 CLI WebSocket server starting on ws://localhost:4002/cli')
+    await appServer.start()
+    console.log(
+      '✅ Server ready! Run "yarn cli:remote" in another terminal to connect.'
+    )
+  } catch (e: any) {
+    console.error('❌ Server error:', e.toString())
+    process.exit(1)
+  }
+}
+
+main().catch((error) => {
+  console.error(error)
+  process.exit(1)
+})
